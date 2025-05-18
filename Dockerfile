@@ -13,8 +13,11 @@ RUN npm install
 # Copy app source
 COPY . .
 
+# Make the startup script executable
+RUN chmod +x start.sh
+
 # Expose port
 EXPOSE 8000
 
-# Start the application
-CMD [ "node", "server.js" ] 
+# Start both server and client
+CMD ["./start.sh"] 

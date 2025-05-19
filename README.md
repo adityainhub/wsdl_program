@@ -65,8 +65,8 @@ docker-compose up
 ### Installation Steps
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/soap-calculator.git
-cd soap-calculator
+git clone https://github.com/adityainhub/wsdl_program.git
+cd wsdl_program
 ```
 
 2. Install dependencies:
@@ -79,6 +79,9 @@ npm install
 node server.js
 ```
 
+The service will be available at:
+- SOAP endpoint: http://localhost:8000/calculator
+- WSDL: http://localhost:8000/calculator?wsdl
 4. In a new terminal, run the client:
 ```bash
 node client.js
@@ -92,21 +95,9 @@ The client provides a menu-driven interface:
 3. Enter second number
 4. View result
 
-## Testing the Service
 
-### Using the Provided Client
-```bash
-# If using Docker:
-docker exec -it [container_id] node client.js
 
-# If installed directly:
-node client.js
-```
 
-### Using SOAP UI
-1. Create a new SOAP project
-2. Use WSDL URL: http://localhost:8000/calculator?wsdl
-3. Test the available operations
 
 ## Troubleshooting
 
